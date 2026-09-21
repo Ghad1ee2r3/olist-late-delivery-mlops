@@ -1,0 +1,14 @@
+# runtime: load config, build features, predict
+# versions match the machine I trained on
+PyYAML==6.0.2
+pandas==2.3.3
+numpy==1.26.4
+scikit-learn==1.6.1
+joblib==1.5.3
+mlflow==2.19.0
+fastapi==0.115.6
+uvicorn==0.32.1
+httpx==0.28.1
+# 2.13 breaks /openapi.json on Python 3.9
+pydantic==2.10.6
+typing_extensions>=4.14.1

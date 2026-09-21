@@ -1,0 +1,16 @@
+# do not send training notebooks or local caches into the build
+notebooks/
+tests/
+mlruns/
+storage/
+logs/
+__pycache__/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.dvc/cache
+.dvc/tmp
+.git/
+*.pdf
+.ipynb_checkpoints/
+.env

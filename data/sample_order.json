@@ -1,0 +1,22 @@
+{
+  "order_id": "b3b54427f53d13f6063ef7007bf7d371",
+  "order_purchase_timestamp": "2018-06-21 08:41:07",
+  "order_approved_at": "2018-06-22 02:59:29",
+  "order_estimated_delivery_date": "2018-07-04 00:00:00",
+  "customer_state": "SP",
+  "seller_state": "SP",
+  "customer_lat": -23.609430024757696,
+  "customer_lng": -46.66050227039208,
+  "seller_lat": null,
+  "seller_lng": null,
+  "product_weight_g": 200.0,
+  "product_photos_qty": 5.0,
+  "n_items": 1.0,
+  "items_price_sum": 55.0,
+  "freight_sum": 7.65,
+  "payment_value_sum": 62.65,
+  "max_installments": 1.0,
+  "payment_type_main": "boleto",
+  "product_category_name_english": "watches_gifts",
+  "is_late": 0
+}

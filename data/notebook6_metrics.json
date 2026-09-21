@@ -1,0 +1,11 @@
+{
+  "chosen_model": "gbdt_weighted",
+  "model_test": {
+    "model": "gbdt_weighted",
+    "accuracy": 0.803,
+    "precision_late": 0.1705,
+    "recall_late": 0.512,
+    "f1_late": 0.2558,
+    "roc_auc": 0.751
+  }
+}

@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+logs/*.log
+logs/predictions.jsonl
+.ipynb_checkpoints/
+.dvc/cache
+.dvc/tmp
+storage/
+mlruns/

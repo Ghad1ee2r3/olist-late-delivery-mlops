@@ -1,0 +1,11 @@
+# Runtime only for the API image (no test extras like httpx)
+PyYAML==6.0.2
+pandas==2.3.3
+numpy==1.26.4
+scikit-learn==1.6.1
+joblib==1.5.3
+mlflow==2.19.0
+fastapi==0.115.6
+uvicorn==0.32.1
+pydantic==2.10.6
+typing_extensions>=4.14.1

@@ -1,0 +1,81 @@
+# What to check on a new order before the model sees it.
+# If a check fails, the service rejects the row. It does not guess.
+
+on_fail: reject
+
+# more than this share of required fields empty means the row is not usable
+max_missing_rate: 0.30
+
+ranges:
+  n_items: {min: 1, max: 21}
+  items_price_sum: {min: 0, max: 20000}
+  freight_sum: {min: 0, max: 2000}
+  payment_value_sum: {min: 0, max: 20000}
+  max_installments: {min: 0, max: 24}
+  product_weight_g: {min: 0, max: 100000}
+  product_photos_qty: {min: 0, max: 20}
+
+# unknown category is allowed. feature code maps it to "other".
+allowed:
+  payment_type_main:
+    - credit_card
+    - boleto
+    - voucher
+    - debit_card
+    - not_defined
+  customer_state:
+    - AC
+    - AL
+    - AP
+    - AM
+    - BA
+    - CE
+    - DF
+    - ES
+    - GO
+    - MA
+    - MT
+    - MS
+    - MG
+    - PA
+    - PB
+    - PR
+    - PE
+    - PI
+    - RJ
+    - RN
+    - RS
+    - RO
+    - RR
+    - SC
+    - SP
+    - SE
+    - TO
+  seller_state:
+    - AC
+    - AL
+    - AP
+    - AM
+    - BA
+    - CE
+    - DF
+    - ES
+    - GO
+    - MA
+    - MT
+    - MS
+    - MG
+    - PA
+    - PB
+    - PR
+    - PE
+    - PI
+    - RJ
+    - RN
+    - RS
+    - RO
+    - RR
+    - SC
+    - SP
+    - SE
+    - TO
