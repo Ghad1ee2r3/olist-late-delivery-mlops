@@ -58,6 +58,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      # Docker/GHCR tags must be lowercase (GitHub usernames can have capitals).
+      - name: Image tag (lowercase)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          OWNER=$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')
+          echo "IMAGE_TAG=ghcr.io/${OWNER}/olist-task03-api:latest" >> "$GITHUB_ENV"
+
       - name: Push image
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: docker/build-push-action@v6
@@ -65,4 +72,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/olist-task03-api:latest
+          tags: ${{ env.IMAGE_TAG }}
