@@ -294,15 +294,4 @@ curl -s http://127.0.0.1:8000/metrics
 | `pip` fails on dvc/pygit2 | skip dvc for now (not in `requirements-dev.txt`); needs Xcode for pygit2 |
 | predict returns 405 in browser | use POST, not GET |
 
----
 
-## Definition of done (from the PDF)
-
-1. Structured repo with config, requirements, README
-2. Inference modules load saved objects + registered model
-3. DVC + expectations + MLflow
-4. Tests pass with one command
-5. FastAPI health / model / predict
-6. Docker Compose brings API + DB + artifact mounts up
-7. CI runs lint + tests + image build
-8. Logging + monitoring with prediction logs stored
