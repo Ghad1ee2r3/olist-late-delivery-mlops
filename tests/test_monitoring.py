@@ -3,7 +3,6 @@
 import json
 
 import pandas as pd
-
 from src.monitoring import reset_stats_for_tests, snapshot
 from src.predict import try_predict
 from src.preprocess import load_bundle
