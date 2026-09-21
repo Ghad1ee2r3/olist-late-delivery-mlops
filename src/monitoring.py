@@ -110,9 +110,7 @@ def snapshot(cfg: Optional[dict] = None) -> dict:
         error_rate = (err / total) if total else 0.0
         late_rate = (STATS["pred_late"] / scored) if scored else 0.0
         avg_proba = (
-            STATS["probability_sum"] / STATS["probability_n"]
-            if STATS["probability_n"]
-            else 0.0
+            STATS["probability_sum"] / STATS["probability_n"] if STATS["probability_n"] else 0.0
         )
         out = {
             "uptime_sec": round(time.time() - STATS["started_at"], 1),
